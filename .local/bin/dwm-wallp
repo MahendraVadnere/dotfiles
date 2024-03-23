@@ -1,0 +1,25 @@
+#!/bin/bash
+# requires feh
+# Script to automatically change the wallpaper and lock screen in spectrwm
+
+# Directory Containing the Pictures
+
+DIR="/home/mav/Pictures/wallpapers/"
+#DIR="/home/mav/Pictures/wallpapers/nord-background/"
+
+# Command to Select wallpapers at random from the $DIR directory
+
+#WAL=$(ls $DIR/*.png | shuf -n1)
+WAL=$(ls $DIR/* | shuf -n1)
+#WAL=$(find "$DIR" -type f -name "*.jpg" -o -name "*.png" | shuf -n1)
+
+# Set lockscreen wallpaper
+
+cat $WAL > $HOME/Pictures/current-wallpaper.png
+
+# Set Terminal Colorscheme
+$HOME/.local/bin/wal -i $WAL
+# Set Desktop Wallpaper
+#feh --bg-scale $HOME/Pictures/current-wallpaper.png
+#feh --bg-scale $WAL
+feh --bg-fill $WAL

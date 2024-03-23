@@ -1,0 +1,8 @@
+#!/bin/sh
+# requires scrot imagemagick and i3lock
+
+#convert $HOME/Pictures/current-wallpaper.png -blur 0x5 $HOME/Pictures/lock-wallpaper.png &&\
+
+i3lock -i $HOME/Pictures/current-wallpaper.png
+
+#rm $HOME/Pictures/lock-wallpaper.png

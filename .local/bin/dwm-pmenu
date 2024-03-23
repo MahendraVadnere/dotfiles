@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DMENU='dmenu -i -l 5'
+choice=$(echo -e "Lock\nLogout\nRestart\nShutdown\nQuit-pmenu" | $DMENU)
+
+case "$choice" in
+	Lock) i3lock-fancy ;;
+	Logout) pkill dwm ;;
+	Restart) sudo reboot ;;
+	Shutdown) systemctl poweroff ;;
+	Quit-pmenu) exit 0 ;;
+esac

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#~/.local/bin/styli.sh &
+~/.local/bin/styli.sh -p -s flowers &
+
+
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rofi -combi-modi window,drun,run -show combi -modi combi &
+#rofi -modi drun -show drun -line padding 4 -hide-scrollbar -show-icons &
